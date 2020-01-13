@@ -77,6 +77,12 @@ def load_dataset(dataset='cifar10', datapath='cifar10/data', batch_size=128, \
                                                download=False, transform=transform)
         test_loader = torch.utils.data.DataLoader(testset, batch_size=batch_size,
                                                   shuffle=False, num_workers=threads)
+        print(type(test_loader))
+        print(test_loader)
+
+    if dataset == 'flight':
+        pass
+
 
     return train_loader, test_loader
 
