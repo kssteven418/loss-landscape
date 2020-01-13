@@ -2,6 +2,8 @@
     1D plotting routines
 """
 
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib import pyplot as pp
 import h5py
 import argparse

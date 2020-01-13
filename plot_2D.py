@@ -3,6 +3,8 @@
 """
 
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib
+matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 from matplotlib import cm
 import h5py
@@ -80,6 +82,7 @@ def plot_2d_contour(surf_file, surf_name='train_loss', vmin=0.1, vmax=10, vlevel
 
 def plot_trajectory(proj_file, dir_file, show=False):
     """ Plot optimization trajectory on the plane spanned by given directions."""
+    print(proj_file)
 
     assert exists(proj_file), 'Projection file does not exist.'
     f = h5py.File(proj_file, 'r')
